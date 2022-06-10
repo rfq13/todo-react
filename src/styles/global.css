@@ -1,0 +1,60 @@
+html,
+body,
+#app {
+	height: 100vh;
+	width: 100vw;
+	margin: 0;
+	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto',
+		'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans',
+		'Helvetica Neue', sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+* {
+	color-scheme: light;
+}
+
+.dark * {
+	color-scheme: dark;
+}
+
+code {
+	@apply font-mono p-1 rounded bg-dark-200 text-light-800;
+}
+
+/* torchlight styles (https://torchlight.dev/docs/css#tailwind) */
+
+/*
+ Margin and rounding are personal preferences,
+ overflow-x-auto is recommended.
+*/
+pre {
+	@apply my-4 rounded overflow-x-auto;
+}
+
+/*
+ Add some vertical padding and expand the width
+ to fill its container. The horizontal padding
+ comes at the line level so that background
+ colors extend edge to edge.
+*/
+pre code.torchlight {
+	@apply block py-4 min-w-max;
+}
+
+/*
+ Horizontal line padding.
+*/
+pre code.torchlight .line {
+	@apply px-4;
+}
+
+/*
+ Push the code away from the line numbers and
+ summary caret indicators.
+*/
+pre code.torchlight .line-number,
+pre code.torchlight .summary-caret {
+	@apply mr-4;
+}
